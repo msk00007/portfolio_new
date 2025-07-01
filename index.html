@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: black;
+      }
+      .layout {
+        display: flex;
+        min-height: 100vh;
+      }
+
+      .main-content {
+        flex: 1;
+        padding: 16px;
+      }
+      .sidebar ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      .sidebar ul li {
+        padding: 10px;
+        list-style-type: none;
+      }
+      .elm {
+        width: 100%;
+        height: 500px;
+        border: 2px solid black;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Toggle button -->
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="layout">
+      <div class="sidebar">
+        <ul>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+        </ul>
+      </div>
+      <div class="main-content">
+        <section id="profile" class="hero elm">
+          <h1>Hello, I'm Saikrishna</h1>
+          <p>
+            I'm a Full Stack Developer specializing in building modern web
+            applications with clean UI/UX and performant code
+          </p>
+
+          <a href="#" class="resume-btn" target="_blank">My Resume</a>
+          <p class="contact-me">
+            <span>Contact me :</span>
+            <img src="./mobile1.png" alt="" class="icon" />
+            <span class="contact-details">9999888898</span>
+            <img src="./email.png" alt="" class="icon" />
+            <span class="contact-details">sample@gmail.com</span>
+          </p>
+        </section>
+
+        <section id="about" class="elm about">
+          <div class="myimg"></div>
+          <div class="about-content">
+            <h2 class="title">About me</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque
+              nobis molestiae, neque explicabo excepturi ut eveniet architecto
+              omnis quas consequuntur ratione? Tempora nihil nulla quo
+              laboriosam aperiam id odit <span>unique</span>
+            </p>
+          </div>
+        </section>
+        <section id="projects" class="elm">
+          <h2 class="title">Projects</h2>
+          <div class="projects-container">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="./project-img.jpg" alt="" />
+              </div>
+              <div class="project-content">
+                <h3>Project Title</h3>
+                <p>
+                  description about the project, highlight the challenges,
+                  technologies/frameworks used
+                </p>
+              </div>
+              <div class="project-buttons">
+                <a href="">
+                  <button class="btn-view">View Demo</button>
+                </a>
+                <a href="">
+                  <button class="btn-source">Source Code</button>
+                </a>
+              </div>
+            </div>
+            <!-- second card -->
+            <div class="project-card">
+              <div class="project-image">
+                <img src="./project-img.jpg" alt="" />
+              </div>
+              <div class="project-content">
+                <h3>Project Title</h3>
+                <p>
+                  description about the project, highlight the challenges,
+                  technologies/frameworks used
+                </p>
+              </div>
+              <div class="project-buttons">
+                <a href="">
+                  <button class="btn-view">View Demo</button>
+                </a>
+                <a href="">
+                  <button class="btn-source">Source Code</button>
+                </a>
+              </div>
+            </div>
+
+            <!-- third card -->
+            <div class="project-card">
+              <div class="project-image">
+                <img src="./project-img.jpg" alt="" />
+              </div>
+              <div class="project-content">
+                <h3>Project Title</h3>
+                <p>
+                  description about the project, highlight the challenges,
+                  technologies/frameworks used
+                </p>
+              </div>
+              <div class="project-buttons">
+                <a href="">
+                  <button class="btn-view">View Demo</button>
+                </a>
+                <a href="">
+                  <button class="btn-source">Source Code</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="skills" class="elm">
+          <h2 class="title">Skills</h2>
+          <div class="skills-list">
+            <div class="skill-item">HTML & CSS</div>
+            <div class="skill-item">JavaScript</div>
+            <div class="skill-item">React</div>
+            <div class="skill-item">Bootstrap</div>
+            <div class="skill-item">Tailwind</div>
+            <div class="skill-item">NodeJs</div>
+            <div class="skill-item">ExpressJs</div>
+            <div class="skill-item">MySQL</div>
+            <div class="skill-item">MongoDB</div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script>
+      function toggleSidebar() {
+        document.querySelector(".sidebar").classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>
